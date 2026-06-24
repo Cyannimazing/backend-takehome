@@ -22,7 +22,7 @@ never leak. Notes are addressed publicly by `uuid` (e.g.
 
 ## Architecture
 
-Layered: route (one-line handlers) → controller (HTTP) → service (validation +
+Layered: route → controller (HTTP) → service (validation +
 business) → repository (queries). The service depends on the repository
 *interface*, so it's testable with a fake. Tests (`tests/notes.test.ts`) prove
 isolation at the DB level via the `asUser` harness: members see only their group,
